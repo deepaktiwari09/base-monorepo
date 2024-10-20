@@ -1,0 +1,30 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "ui": "tui",
+  "tasks": {
+    "build": {
+      "dependsOn": ["^build"],
+      "inputs": ["$TURBO_DEFAULT$", ".env*"],
+      "outputs": [".next/**", "!.next/cache/**"]
+    },
+    "lint": {
+      "dependsOn": ["^lint"]
+    },
+    "dev": {
+      "cache": false,
+      "persistent": true
+    },
+    "landing":{
+      "cache": false,
+      "persistent": true
+    },
+    "master":{
+      "cache": false,
+      "persistent": true
+    },
+    "customer":{
+      "cache": false,
+      "persistent": true
+    }
+  }
+}

@@ -1,0 +1,28 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+input CreateUserModuleInput {
+  FirstName: String!
+  email: String
+  password: String!
+  phone: String
+}
+
+type Mutation {
+  create(createUserModuleInput: CreateUserModuleInput!): userResponse!
+  remove(id: String!): userResponse!
+}
+
+type Query {
+  findAll: [userResponse!]!
+  findOne(id: String!): userResponse!
+}
+
+type userResponse {
+  _id: String!
+  email: String!
+  password: String!
+  phone: String!
+  userName: String!
+}
